@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoveIQ | Logistics Reimagined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy: #0f172a; --blue: #38bdf8; --slate: #64748b; --gold: #fbbf24; }
+    body { margin: 0; font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.6; }
+    
+    header { display: flex; justify-content: space-between; padding: 1.2rem 5%; background: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .logo { font-weight: 800; font-size: 1.5rem; color: var(--navy); }
+    .logo span { color: var(--blue); }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: var(--navy); font-weight: 600; font-size: 0.9rem; }
+
+    .hero { background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=2000'); background-size: cover; color: white; padding: 100px 5%; text-align: center; }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; }
+    .cta { background: var(--blue); color: var(--navy); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; }
+
+    .section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+    h2 { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; color: var(--navy); }
+
+    /* About Section */
+    .about-container { display: flex; align-items: center; gap: 4rem; flex-wrap: wrap; }
+    .about-text { flex: 1; min-width: 300px; }
+    .about-image { flex: 1; min-width: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .about-image img { width: 100%; display: block; }
+
+    /* Review Section */
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .review-card { background: #f8fafc; padding: 2rem; border-radius: 16px; border-top: 4px solid var(--blue); }
+    .stars { color: var(--gold); margin-bottom: 1rem; font-size: 1.2rem; }
+    .reviewer-name { font-weight: 700; display: block; margin-top: 1rem; color: var(--navy); }
+    .reviewer-title { font-size: 0.8rem; color: var(--slate); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .card { padding: 2rem; border: 1px solid #e2e8f0; border-radius: 16px; text-align: center; }
+
+    .contact-box { background: var(--navy); color: white; padding: 4rem; border-radius: 24px; text-align: center; }
+    input, textarea { width: 100%; max-width: 500px; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; border: none; }
+    .submit-btn { padding: 1rem 3rem; background: var(--blue); color: var(--navy); border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+
+    footer { background: #000; color: #94a3b8; padding: 3rem 5%; text-align: center; font-size: 0.9rem; }
+    footer a { color: white; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MOVE<span>IQ</span></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Intelligent Logistics <br>for Modern Commerce</h1>
+  <p>MoveIQ syncs speed, safety, and technology to keep your supply chain moving.</p>
+  <a href="#contact" class="cta">Get a Custom Quote</a>
+</section>
+
+<section class="section" id="about">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=800" alt="Logistics Operations">
+    </div>
+    <div class="about-text">
+      <h2 style="text-align: left; margin-bottom: 1.5rem;">Moving with IQ</h2>
