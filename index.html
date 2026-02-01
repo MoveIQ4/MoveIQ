@@ -3,78 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoveIQ | Enterprise Logistics</title>
+    <title>MoveIQ | Premier Logistics & Supply Chain</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #000; --accent: #2563eb; --gray: #f3f4f6; }
+        :root { --primary: #000; --accent: #2563eb; --gray: #f3f4f6; --gold: #fbbf24; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #111827; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; color: #111827; line-height: 1.6; background: #fff; scroll-behavior: smooth; }
 
-        /* Navigation */
+        /* Sharp Navigation */
         header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 1.5rem 6%; background: #fff; position: sticky; top: 0; z-index: 1000;
+            padding: 1.25rem 6%; background: #fff; position: sticky; top: 0; z-index: 1000;
             border-bottom: 1px solid #e5e7eb;
         }
-        .logo { font-weight: 900; font-size: 1.6rem; text-decoration: none; color: #000; }
+        .logo { font-weight: 900; font-size: 1.8rem; text-decoration: none; color: #000; letter-spacing: -1.5px; }
         .logo span { color: var(--accent); }
-        .btn-quote { background: var(--accent); color: #fff !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: #4b5563; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .btn-quote { background: var(--accent); color: #fff !important; padding: 0.7rem 1.4rem; border-radius: 4px; border: 2px solid var(--accent); transition: 0.3s; }
+        .btn-quote:hover { background: transparent; color: var(--accent) !important; }
 
-        /* Hero Image Section */
+        /* Hero - High Impact */
         .hero {
-            height: 65vh; min-height: 500px;
+            height: 80vh; min-height: 600px;
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1600');
             background-size: cover; background-position: center;
             display: flex; align-items: center; padding: 0 6%; color: #fff;
         }
-        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1rem; line-height: 1.1; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1; margin-bottom: 1.5rem; }
 
-        /* Service Images Grid */
-        .section { padding: 80px 6%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: var(--gray); border-radius: 12px; overflow: hidden; transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 2rem; }
+        /* Section Styling */
+        .section { padding: 100px 6%; max-width: 1300px; margin: auto; }
+        .section-title { text-align: center; margin-bottom: 5rem; }
+        .section-title h2 { font-size: 3rem; font-weight: 900; letter-spacing: -1px; }
 
-        /* Dark CTA Section */
-        .dark-cta { background: #000; color: #fff; padding: 80px 6%; text-align: center; }
-        .btn-large { background: var(--accent); color: #fff; padding: 1rem 2.5rem; text-decoration: none; font-weight: 700; border-radius: 4px; display: inline-block; margin-top: 1.5rem; }
+        /* About Us - Sharp Layout */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-img { width: 100%; border-radius: 4px; box-shadow: 20px 20px 0px var(--accent); }
 
-        footer { background: #f9fafb; padding: 60px 6%; border-top: 1px solid #e5e7eb; text-align: center; }
+        /* Services Grid - Interactive Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        .card { background: var(--gray); border-radius: 8px; overflow: hidden; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid transparent; }
+        .card:hover { transform: translateY(-15px); border-color: var(--accent); background: #fff; box-shadow: 0 30px 60px -12px rgba(0,0,0,0.15); }
+        .card img { width: 100%; height: 250px; object-fit: cover; filter: grayscale(20%); }
+        .card-content { padding: 2.5rem; }
+        .card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+
+        /* Reviews - Trust Signals */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+        .review-card { border: 2px solid var(--gray); padding: 3rem; border-radius: 8px; transition: 0.3s; }
+        .review-card:hover { border-color: var(--accent); }
+        .stars { color: var(--gold); font-size: 1.4rem; margin-bottom: 1.5rem; }
+
+        /* Contact Section - Action Oriented */
+        .contact-cta { background: #000; color: #fff; padding: 100px 6%; text-align: center; border-radius: 8px; }
+        .clickable-link { color: var(--accent); text-decoration: none; font-weight: 900; transition: 0.3s; font-size: 1.5rem; }
+        .clickable-link:hover { color: #fff; text-decoration: underline; }
+        .btn-large { background: var(--accent); color: #fff; padding: 1.2rem 3rem; text-decoration: none; font-weight: 900; border-radius: 4px; display: inline-block; margin-top: 2rem; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Enterprise Footer */
+        footer { background: #000; color: #fff; padding: 80px 6% 40px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem; margin-bottom: 5rem; }
+        .footer-col h4 { margin-bottom: 1.5rem; font-size: 1rem; text-transform: uppercase; color: #4b5563; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 1rem; }
+        .footer-col a { text-decoration: none; color: #9ca3af; font-size: 1rem; transition: 0.3s; }
+        .footer-col a:hover { color: var(--accent); }
+
+        @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } .hero h1 { font-size: 3rem; } }
     </style>
 </head>
 <body>
 
     <header>
         <a href="#" class="logo">MOVE<span>IQ</span></a>
-        <a href="#contact" class="btn-quote">Get Instant Quote</a>
+        <nav>
+            <a href="#about">ABOUT</a>
+            <a href="#services">CAPACITY</a>
+            <a href="#reviews">REVIEWS</a>
+            <a href="tel:3853820181" class="btn-quote">CALL NOW</a>
+        </nav>
     </header>
 
     <section class="hero">
         <div>
             <h1>Driven for You.™<br>Driven by Data.</h1>
-            <p style="font-size: 1.2rem; max-width: 600px;">Providing enterprise-grade shipment solutions you deserve.</p>
-            <a href="#contact" class="btn-large">Ship with Us</a>
+            <p style="font-size: 1.4rem; max-width: 650px; opacity: 0.9; margin-bottom: 2rem;">MoveIQ combines enterprise-grade capacity with advanced logistics technology to move your business forward.</p>
+            <a href="#contact" class="btn-large">Get Instant Quote</a>
         </div>
     </section>
 
-    <section class="section">
-        <h2 style="font-size: 2.5rem; font-weight: 900; text-align: center; margin-bottom: 3rem;">Our Capacity</h2>
+    <section class="section" id="about">
+        <div class="about-grid">
+            <div>
+                <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 2rem; line-height: 1;">Intelligence <br>in Motion.</h2>
+                <p style="margin-bottom: 1.5rem; color: #4b5563; font-size: 1.1rem;">MoveIQ is the premier choice for shippers who demand precision. We don't just facilitate transportation; we engineer supply chain solutions that work harder for you.</p>
+                <p style="color: #4b5563; font-size: 1.1rem;">Our "IQ Guarantee" is a promise of 100% transparency, live GPS tracking, and safety protocols that exceed industry standards.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" class="about-img" alt="Enterprise Logistics">
+        </div>
+    </section>
+
+    <section class="section" id="services" style="background: #fcfcfc;">
+        <div class="section-title">
+            <h2>Our Capacity</h2>
+        </div>
         <div class="grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600" alt="Truckload">
+                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=600" alt="Truckload">
                 <div class="card-content">
                     <h3>Truckload</h3>
-                    <p>Full capacity for dry van and temperature-controlled freight.</p>
+                    <p>Exclusive dry van and temperature-controlled capacity across the North American network.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=600" alt="Intermodal">
                 <div class="card-content">
                     <h3>Intermodal</h3>
-                    <p>Efficient rail and truck combinations for long-haul shipping.</p>
+                    <p>Optimized rail-to-road transitions that cut costs and environmental impact by 30%.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=600" alt="Final Mile">
+                <div class="card-content">
+                    <h3>Final Mile</h3>
+                    <p>White-glove delivery solutions that ensure your customer's experience is perfect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="reviews">
+        <div class="section-title">
+            <h2>Market Feedback</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p style="font-style: italic; font-size: 1.1rem;">"The most professional carrier we've utilized in a decade. Their MoveIQ 360 platform gives us the visibility we've been missing."</p>
+                <p style="margin-top: 2rem; font-weight: 900;">VP of Supply Chain</p>
+                <p style="font-size: 0.8rem; color: #9ca3af; text-transform: uppercase;">Fortune 500 Manufacturer</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p style="font-style: italic; font-size: 1.1rem;">"MoveIQ doesn't just promise—they deliver. Their customer service at (385)-382-0181 is responsive 24/7."</p>
+                <p style="margin-top: 2rem; font-weight: 900;">Operations Director</p>
+                <p style="font-size: 0.8rem; color: #9ca3af; text-transform: uppercase;">Global Distribution Hub</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="contact-cta">
+            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Ready for Excellence?</h2>
+            <p style="margin-bottom: 1rem; opacity: 0.8;">Tap to connect with a specialist immediately:</p>
+            <p><a href="tel:3853820181" class="clickable-link">CALL: (385)-382-0181</a></p>
+            <p><a href="mailto:MoveIQ@usa.com" class="clickable-link">EMAIL: MoveIQ@usa.com</a></p>
+            
+            <form action="https://formspree.io/f/xnjzdzwl" method="POST" style="max-width: 500px; margin: 3rem auto 0;">
+                <input type="text" name="name" placeholder="Full Name" style="width:100%; padding:1.2rem; margin-bottom:1rem; border-radius:4px; border:none;" required>
+                <input type="email" name="email" placeholder="Business Email" style="width:100%; padding:1.2rem; margin-bottom:1rem; border-radius:4px; border:none;" required>
+                <textarea name="message" rows="4" placeholder="How can MoveIQ help your business?" style="width:100%; padding:1.2rem; margin-bottom:1rem; border-radius:4px; border:none;" required></textarea>
+                <button type="submit" class="btn-large" style="width: 100%;">REQUEST QUOTE</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="color: #fff;">MOVE<span>IQ</span></a>
+                <p style="margin-top: 1.5rem; color: #9ca3af;">Intelligent logistics for modern commerce.</p>
+            </div>
+            <div class="footer-col">
+                <h4>SHIPPERS</h4>
+                <ul>
+                    <li><a href="tel:3853820181">Get a Quote</a></li>
+                    <li><a href="#">Track Shipment</a></li>
+                    <li><a href="#">Technology</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="mailto:MoveIQ@usa.com">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #1f2937; padding-top: 2rem; display: flex; justify-content: space-between; flex-wrap: wrap; color: #4b5563; font-size: 0.85rem;">
+            <p>&copy; 2026 MoveIQ Transport, Inc. The MoveIQ logo is a trademark of MoveIQ Global.</p>
+            <p>Built for Speed & Reliability.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
